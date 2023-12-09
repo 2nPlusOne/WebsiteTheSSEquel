@@ -21,21 +21,21 @@ export class InvolvementSlot implements ZCardContent {
     }
 
     toContent(): FC<{}> {
-        return () => {
+        return function InvolvementSlotContent() {
             const generalClasses = 'text-left pt-4 pb-32 md:py-16'
             const titleClasses = 'bg-clip-text font-bold text-3xl/[3rem]'
             const bodyClasses = 'mt-4 pb-4 text-xl/relaxed'
-        
+
             return (
-            <div className={generalClasses}>
-                <h2 className={titleClasses}>
-                    {this.title}
-                </h2>
-        
-                <p className={bodyClasses}>
-                    {this.body}
-                </p>
-            </div>
+                <div className={generalClasses}>
+                    <h2 className={titleClasses}>
+                        {this.title}
+                    </h2>
+
+                    <p className={bodyClasses}>
+                        {this.body}
+                    </p>
+                </div>
             );
         }
     }

@@ -21,21 +21,21 @@ export class CommitteeSlot implements ZCardContent {
     }
 
     toContent(): FC<{}> {
-        return () => {
+        return function CommitteeSlotContent() {
             const generalClasses = 'text-left pt-4 pb-32 md:py-16'
             const nameClasses = 'bg-clip-text font-bold text-3xl/[3rem]'
             const descriptionClasses = 'mt-4 pb-4 text-xl/relaxed'
-        
+
             return (
-            <div className={generalClasses}>
-                <h2 className={nameClasses}>
-                    {this.name}
-                </h2>
-        
-                <p className={descriptionClasses}>
-                    {this.description}
-                </p>
-            </div>
+                <div className={generalClasses}>
+                    <h2 className={nameClasses}>
+                        {this.name}
+                    </h2>
+
+                    <p className={descriptionClasses}>
+                        {this.description}
+                    </p>
+                </div>
             );
         }
     }
