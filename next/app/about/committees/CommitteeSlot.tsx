@@ -21,7 +21,7 @@ export class CommitteeSlot implements ZCardContent {
     }
 
     toContent(): FC<{}> {
-        return function CommitteeSlotContent() {
+        const CommitteeSlotContent = () => {
             const generalClasses = 'text-left pt-4 pb-32 md:py-16'
             const nameClasses = 'bg-clip-text font-bold text-3xl/[3rem]'
             const descriptionClasses = 'mt-4 pb-4 text-xl/relaxed'
@@ -38,6 +38,8 @@ export class CommitteeSlot implements ZCardContent {
                 </div>
             );
         }
+        CommitteeSlotContent.displayName = "CommitteeSlotContent";
+        return CommitteeSlotContent;
     }
 
     getImageSrc(): string {

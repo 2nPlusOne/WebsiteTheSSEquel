@@ -21,7 +21,7 @@ export class InvolvementSlot implements ZCardContent {
     }
 
     toContent(): FC<{}> {
-        return function InvolvementSlotContent() {
+        const InvolvementSlotContent = () => {
             const generalClasses = 'text-left pt-4 pb-32 md:py-16'
             const titleClasses = 'bg-clip-text font-bold text-3xl/[3rem]'
             const bodyClasses = 'mt-4 pb-4 text-xl/relaxed'
@@ -38,6 +38,8 @@ export class InvolvementSlot implements ZCardContent {
                 </div>
             );
         }
+        InvolvementSlotContent.displayName = "InvolvementSlotContent";
+        return InvolvementSlotContent;
     }
 
     getImageSrc(): string {
